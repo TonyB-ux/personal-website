@@ -15,30 +15,81 @@ export default function Home() {
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+      <nav style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        backdropFilter: 'blur(12px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            height: '64px'
+          }}>
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-white font-bold text-xl"
+              style={{
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: '20px'
+              }}
             >
               Tony bbsl
             </motion.div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-white/80 hover:text-white transition-colors">Home</a>
-              <a href="#about" className="text-white/80 hover:text-white transition-colors">About</a>
-              <a href="#projects" className="text-white/80 hover:text-white transition-colors">Projects</a>
-              <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+            <div style={{
+              display: 'flex',
+              gap: '32px'
+            }}>
+              <a href="#home" style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                textDecoration: 'none',
+                transition: 'color 0.3s'
+              }}>Home</a>
+              <a href="#about" style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                textDecoration: 'none',
+                transition: 'color 0.3s'
+              }}>About</a>
+              <a href="#projects" style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                textDecoration: 'none',
+                transition: 'color 0.3s'
+              }}>Projects</a>
+              <a href="#contact" style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                textDecoration: 'none',
+                transition: 'color 0.3s'
+              }}>Contact</a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="home" style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
         {/* Animated background elements */}
-        <div className="absolute inset-0">
+        <div style={{
+          position: 'absolute',
+          inset: 0
+        }}>
           <motion.div 
             animate={{ 
               rotate: 360,
@@ -49,7 +100,16 @@ export default function Home() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl"
+            style={{
+              position: 'absolute',
+              top: '25%',
+              left: '25%',
+              width: '256px',
+              height: '256px',
+              background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2))',
+              borderRadius: '50%',
+              filter: 'blur(48px)'
+            }}
           />
           <motion.div 
             animate={{ 
@@ -61,24 +121,60 @@ export default function Home() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"
+            style={{
+              position: 'absolute',
+              bottom: '25%',
+              right: '25%',
+              width: '320px',
+              height: '320px',
+              background: 'linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2))',
+              borderRadius: '50%',
+              filter: 'blur(48px)'
+            }}
           />
         </div>
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <div style={{
+          position: 'relative',
+          zIndex: 10,
+          textAlign: 'center',
+          maxWidth: '1024px',
+          margin: '0 auto',
+          padding: '0 16px'
+        }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="mb-8"
+            style={{ marginBottom: '32px' }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-6">
+            <h1 style={{
+              fontSize: 'clamp(3rem, 8vw, 6rem)',
+              fontWeight: 'bold',
+              background: 'linear-gradient(to right, #ffffff, #e9d5ff, #a5f3fc)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              marginBottom: '24px',
+              lineHeight: '1.1'
+            }}>
               Tony bbsl
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
+            <p style={{
+              fontSize: 'clamp(1.25rem, 3vw, 2rem)',
+              color: 'rgba(255, 255, 255, 0.8)',
+              marginBottom: '32px',
+              lineHeight: '1.6'
+            }}>
               Full Stack Developer & Creative Technologist
             </p>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto mb-12">
+            <p style={{
+              fontSize: '1.125rem',
+              color: 'rgba(255, 255, 255, 0.6)',
+              maxWidth: '512px',
+              margin: '0 auto 48px auto',
+              lineHeight: '1.7'
+            }}>
               Crafting digital experiences that blend cutting-edge technology with beautiful design
             </p>
           </motion.div>
@@ -87,19 +183,47 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '16px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginBottom: '48px',
+              flexWrap: 'wrap'
+            }}
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              style={{
+                padding: '16px 32px',
+                background: 'linear-gradient(to right, #9333ea, #2563eb)',
+                color: 'white',
+                borderRadius: '50px',
+                fontWeight: '600',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 10px 25px rgba(147, 51, 234, 0.3)',
+                transition: 'all 0.3s ease'
+              }}
             >
               View My Work
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+              style={{
+                padding: '16px 32px',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                color: 'white',
+                borderRadius: '50px',
+                fontWeight: '600',
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(8px)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
             >
               Get In Touch
             </motion.button>
