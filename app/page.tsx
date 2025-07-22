@@ -158,7 +158,7 @@ export default function Home() {
               marginBottom: '24px',
               lineHeight: '1.1'
             }}>
-              Tony bbsl
+              Tony Boche
             </h1>
             <p style={{
               fontSize: 'clamp(1.25rem, 3vw, 2rem)',
@@ -166,16 +166,16 @@ export default function Home() {
               marginBottom: '32px',
               lineHeight: '1.6'
             }}>
-              Full Stack Developer & Creative Technologist
+              IT-Projektmanager & Kundenbetreuung
             </p>
             <p style={{
               fontSize: '1.125rem',
               color: 'rgba(255, 255, 255, 0.6)',
-              maxWidth: '512px',
+              maxWidth: '600px',
               margin: '0 auto 48px auto',
               lineHeight: '1.7'
             }}>
-              Crafting digital experiences that blend cutting-edge technology with beautiful design
+              Spezialisiert auf ERP-Systeme, Webshop-Rollouts und Qualitätsmanagement in der Biobranche
             </p>
           </motion.div>
 
@@ -272,71 +272,169 @@ export default function Home() {
 
 
       {/* About Section */}
-      <section id="about" className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" style={{
+        padding: '80px 0',
+        position: 'relative'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            style={{
+              textAlign: 'center',
+              marginBottom: '64px'
+            }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About Me
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: 'bold',
+              color: 'white',
+              marginBottom: '24px'
+            }}>
+              Mein Werdegang
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              I'm a passionate full-stack developer who transforms ideas into digital reality
+            <p style={{
+              fontSize: '1.25rem',
+              color: 'rgba(255, 255, 255, 0.7)',
+              maxWidth: '768px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}>
+              Vom Kundensupport zum IT-Projektmanager – mit tiefem Verständnis für Kundenanforderungen und technische Lösungen
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {/* Skill Card 1 */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '32px',
+            marginBottom: '64px'
+          }}>
+            {/* Aufgabenbereich 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="backdrop-blur-lg bg-white/10 rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+              style={{
+                backdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                borderRadius: '16px',
+                padding: '32px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
+              }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
-                <FaCode className="text-white text-2xl" />
+              <div style={{
+                width: '64px',
+                height: '64px',
+                background: 'linear-gradient(to right, #9333ea, #ec4899)',
+                borderRadius: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px'
+              }}>
+                <FaCode style={{ color: 'white', fontSize: '24px' }} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Full Stack Development</h3>
-              <p className="text-white/70 leading-relaxed">
-                Building scalable applications with modern technologies like React, Node.js, and cloud platforms.
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '16px'
+              }}>IT-Projektmanagement</h3>
+              <p style={{
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: '1.6'
+              }}>
+                Softwareumstellungen, Webshop-Rollouts für Lieferdienste und Einzelhandel, Koordination zwischen Entwicklerteam und Kunden
               </p>
             </motion.div>
 
-            {/* Skill Card 2 */}
+            {/* Aufgabenbereich 2 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="backdrop-blur-lg bg-white/10 rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
+              style={{
+                backdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                borderRadius: '16px',
+                padding: '32px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
+              }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
-                <FaPalette className="text-white text-2xl" />
+              <div style={{
+                width: '64px',
+                height: '64px',
+                background: 'linear-gradient(to right, #2563eb, #06b6d4)',
+                borderRadius: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px'
+              }}>
+                <FaPalette style={{ color: 'white', fontSize: '24px' }} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">UI/UX Design</h3>
-              <p className="text-white/70 leading-relaxed">
-                Creating intuitive and beautiful user experiences that delight users and drive engagement.
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '16px'
+              }}>Kundenbetreuung Großkunde</h3>
+              <p style={{
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: '1.6'
+              }}>
+                Operative Betreuung von Großkunden, Koordination von Anpassungen und neuen Anforderungen im System
               </p>
             </motion.div>
 
-            {/* Skill Card 3 */}
+            {/* Aufgabenbereich 3 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="backdrop-blur-lg bg-white/10 rounded-2xl p-8 border border-white/20 hover:border-green-400/50 transition-all duration-300"
+              style={{
+                backdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                borderRadius: '16px',
+                padding: '32px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
+              }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                <FaRocket className="text-white text-2xl" />
+              <div style={{
+                width: '64px',
+                height: '64px',
+                background: 'linear-gradient(to right, #10b981, #059669)',
+                borderRadius: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px'
+              }}>
+                <FaRocket style={{ color: 'white', fontSize: '24px' }} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Performance Optimization</h3>
-              <p className="text-white/70 leading-relaxed">
-                Optimizing applications for speed, accessibility, and seamless user experiences across all devices.
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '16px'
+              }}>Qualitätsmanagement & Mitarbeiterführung</h3>
+              <p style={{
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: '1.6'
+              }}>
+                Qualitätssicherung, Prozessoptimierung und erste Aufgaben in der Mitarbeiterführung
               </p>
             </motion.div>
           </div>
@@ -346,42 +444,120 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '32px',
+              textAlign: 'center'
+            }}
           >
-            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-white/60">Projects Completed</div>
+            <div style={{
+              backdropFilter: 'blur(16px)',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '12px',
+              padding: '24px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <div style={{
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '8px'
+              }}>15+</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)'
+              }}>Webshop-Rollouts</div>
             </div>
-            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-white mb-2">3+</div>
-              <div className="text-white/60">Years Experience</div>
+            <div style={{
+              backdropFilter: 'blur(16px)',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '12px',
+              padding: '24px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <div style={{
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '8px'
+              }}>5+</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)'
+              }}>Jahre Biobranche</div>
             </div>
-            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-white/60">Client Satisfaction</div>
+            <div style={{
+              backdropFilter: 'blur(16px)',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '12px',
+              padding: '24px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <div style={{
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '8px'
+              }}>4</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)'
+              }}>SQL-Datenbanken</div>
             </div>
-            <div className="backdrop-blur-lg bg-white/5 rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-white/60">Support Available</div>
+            <div style={{
+              backdropFilter: 'blur(16px)',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '12px',
+              padding: '24px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <div style={{
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                color: 'white',
+                marginBottom: '8px'
+              }}>100%</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)'
+              }}>Kundenzufriedenheit</div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="projects" style={{
+        padding: '80px 0',
+        position: 'relative'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            style={{
+              textAlign: 'center',
+              marginBottom: '64px'
+            }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Featured Projects
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: 'bold',
+              color: 'white',
+              marginBottom: '24px'
+            }}>
+              Meine Projekte
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Showcasing my latest work in web development and digital innovation
+            <p style={{
+              fontSize: '1.25rem',
+              color: 'rgba(255, 255, 255, 0.7)',
+              maxWidth: '768px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}>
+              Erfolgreiche IT-Projekte und Systemimplementierungen in der Biobranche
             </p>
           </motion.div>
 
